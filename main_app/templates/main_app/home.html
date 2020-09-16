@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django To Dos</title>
+</head>
+<body>
+   <h1>Django To Dos</h1>
+   <ul>
+       {% for todo in todos %}
+       <li>{{ todo.todo_text }}</li>
+       {% endfor %}
+   </ul>
+   <form action="">
+       <input type="text" name="todo_text">
+       <button type="submit">ADD TO DO</button>
+   </form>
+</body>
+</html>

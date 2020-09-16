@@ -1,0 +1,33 @@
+<!-- base.html -->
+{% extends "base.html" %} {% block content %}
+<div class="table-container">
+  <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+
+    <thead>
+      <tr>
+        <th>API</th>
+        <th>Description</th>
+        <th>Auth</th>
+        <th>Category</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    
+    {% for todo in todos.entries %}
+
+<tbody>
+  <tr>
+    <td>{{ todo.API }}</td>
+    <td>{{ todo.Description }}</td>
+    <td>{{ todo.Auth }}</td>
+    <td>{{ todo.Category }}</td>
+    <td><a href="{{ todo.Link }}" target="_blank">{{ todo.Link }}</a></td>
+  </tr>
+</tbody>
+
+  {% endfor %}
+</table>
+</div>
+
+{% endblock content %}
+
